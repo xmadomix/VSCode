@@ -8,37 +8,92 @@
     <h2><label for="txtOut">Output from Task 2.2:</label></h2>
     <div style="padding: 10px; min-width: 512px; border: darkblue thin solid; background-color: antiquewhite; font-family: 'Courier New', serif">
       <span id="txtOut" style="white-space: nowrap"></span>
+      <ol>
+        <li>Where should you use constants, and where should you use variables? Can they all be constants?</li>
+        <p>
+          [ when using constants, you can use it for putting in values, as these wont change throughout the program.
+          when using variables, you use these when you want the value to change during the programming, as its easier to make changes.
+          constants are fixed, which means whenever you program, you need variables to store values that change, in short:
+          constants -> fixed values
+          variables -> dynamic values ]
+        </p>
+        <li>How do parentheses affect the arithmetic outcome of an expression?</li>
+        <p>
+          [using parentheses affects the arithmetic outcome by changing the order of operations. these parentheses tells the computer / you what to do inside the parentheses first before the other commands.
+          when coding as an example, without the parentheses, multiplication happens first. but adding parentheses (first part where the addition is) that part happens first.
+          basically, they help ho the calculations are done
+
+          example:
+          3 + 2 * 5 = 13
+          (3 + 2) * 5 = 25
+
+          the part where the parentheses were put is solved first before anything else. ]
+        </p>
+        <li>How do we limit floating-point numbers to a given number of decimals?</li>
+        <p>
+          [ to limit floating-point numbers, you are able to round them. this makes it easier to read but makes the resulting number look more clean and in a way whole. 
+          in many languages, including javascript you can use the function round() 
+          you have a number (56.132564) but want to round it:
+          
+          number = 56.132564
+          rounded_number = round(number, 2)
+          this ensures the number is displayed or used with specified precision, this function rounds to 2 decimal places. ]
+        </p>
+        <li>How can we compare two floating-point values to see if they are equal (is 12.199999 the same as 12.2)?</li>
+        <p>
+          [ to compare the two floating-point values, you have to check the difference between them is very small instead of checking for exact equality. 
+          the values 12.199999 and 12.2, seems familiar but we can check if the distance is small to compare them: 
+          
+          abs(a - b) < 0.00001
+          (checks if the difference is tiny) 
+          
+          checking the values like this make you account for minor rounding differences hen comparing floating-point numbers. ]
+        </p>
+        <li>What do comparison operators return, and how can we check if they are FALSE or TRUE?</li>
+        <p>
+          [ we have comparison operators ( ==, !=, >, <) returns true or false based on whether the comparison is correct.
+          5 > 3 # returns true
+          5 == 3 # returns false
+          
+          the >< signs shows which value is bigger while == shows that the values are of equal value.
+          
+          you can use these directly aswell in conditions, ith statements (if, else) to check if they are true or false:
+          
+          if 5 > 3: 
+          print("true") 
+          
+          this will run because 5 > 3 is true. ]
+        </p>
+        <li>How does the Math.random() function work, and what can it be used for?</li>
+        <p>
+          [ this function (math.random()) generates a random decimal number between 0 and 1 (0 being inclusive and 1 exclusive) 
+          you can use math.random for such things like:
+          generating random numbers, an example is like random dice rolls
+          and you can simulate randomness in games or programs
+          
+          example:
+          
+          let randomNum = Math.random();
+          
+          to get a random number in a specific range, you can scale it
+          
+          let randomNum, = Math.random(); * 10 + 1;
+          (with the exapmle range from 1 to 10, you can get a random number from this function. ) ]
+        </p>
+        <li>What is modulus (%), and when do we need this operator in mathematical operations?</li>
+        <p>
+          [ Modulus is an operator that gives the remainder of a division. 
+
+          an example:
+          console.log(10 % 3) ;
+
+          (remainder that this works for other languages as well, including python)
+          whenever you use modulus operator, it checks divisibility, an example is if num % 2 == 0 checks if a number is even.
+          and it can cycle thru ranges, like wrapping around in a circular list or limiting values, an example is how the clock works, how the time moves]
+        </p>
+      </ol>
+      <script type="module" src="./task_2-2.mjs" defer></script>
     </div>
-    <ol>
-      <li>Where should you use constants, and where should you use variables? Can they all be constants?</li>
-      <p>
-				[Replace this with you answer]
-			</p>
-      <li>How do parentheses affect the arithmetic outcome of an expression?</li>
-      <p>
-				[Replace this with you answer]
-			</p>
-      <li>How do we limit floating-point numbers to a given number of decimals?</li>
-      <p>
-				[Replace this with you answer]
-			</p>
-      <li>How can we compare two floating-point values to see if they are equal (is 12.199999 the same as 12.2)?</li>
-      <p>
-				[Replace this with you answer]
-			</p>
-      <li>What do comparison operators return, and how can we check if they are FALSE or TRUE?</li>
-      <p>
-				[Replace this with you answer]
-			</p>
-      <li>How does the Math.random() function work, and what can it be used for?</li>
-      <p>
-				[Replace this with you answer]
-			</p>
-      <li>What is modulus (%), and when do we need this operator in mathematical operations?</li>
-      <p>
-				[Replace this with you answer]
-			</p>
-    </ol>
-		<script type="module" src="./task_2-2.mjs" defer></script>
+  ss
   </body>
 </html>
